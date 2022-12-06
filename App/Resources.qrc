@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MaterialDesignIcons/cog.svg</file>
+        <file>MaterialDesignIcons/humidity.svg</file>
+        <file>MaterialDesignIcons/sun-thermometer.svg</file>
+        <file>MaterialDesignIcons/traffic-light.svg</file>
+        <file>MaterialDesignIcons/traffic-lightwhite.svg</file>
+        <file>MaterialDesignIcons/weather_black.svg</file>
+        <file>MaterialDesignIcons/weather-preasure.svg</file>
+        <file>MaterialDesignIcons/weather_white.svg</file>
+        <file>MaterialDesignIcons/weather-windy.svg</file>
+        <file>MaterialDesignIcons/Spinner.gif</file>
+        <file>MaterialDesignIcons/forecast_airTemp.svg</file>
+        <file>MaterialDesignIcons/forecast_roadTemp.svg</file>
+        <file>MaterialDesignIcons/forecast_windDir.svg</file>
+        <file>MaterialDesignIcons/forecast_windSpeed.svg</file>
+        <file>MaterialDesignIcons/forecast_daylight.svg</file>
+        <file>MaterialDesignIcons/forecast_reliable.svg</file>
+        <file>MaterialDesignIcons/forecast_roadCond.svg</file>
+        <file>MaterialDesignIcons/forecast_symbol.svg</file>
+        <file>MaterialDesignIcons/forecast_reason.svg</file>
+        <file>MaterialDesignIcons/clouds.svg</file>
+        <file>MaterialDesignIcons/arrow-top-right.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ForecastCardWidget</class>
+ <widget class="QWidget" name="ForecastCardWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>747</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3" stretch="4">
+   <item>
+    <layout class="QHBoxLayout" name="forecastCardLayout" stretch="9,9,10">
+     <item>
+      <widget class="QFrame" name="leftColFrame">
+       <layout class="QVBoxLayout" name="leftColLayout" stretch="0,0,0,0">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="roadTempCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="roadTempGrid" columnstretch="1,5">
+           <item row="0" column="1">
+            <widget class="QLabel" name="roadTempLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Road temperature</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="roadTempValue">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="roadTempLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_roadTemp.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="windDirCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="windDirGrid" columnstretch="1,5">
+           <item row="0" column="1">
+            <widget class="QLabel" name="windDirLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Wind direction</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="windDirValue">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="windDirLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_windDir.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="daylightCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="daylightGrid" columnstretch="1,5">
+           <item row="1" column="1">
+            <widget class="QLabel" name="daylightValue">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="daylightLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Daylight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="daylightLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_daylight.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="reliabilityCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="reliabilityGrid" columnstretch="1,5">
+           <item row="1" column="1">
+            <widget class="QLabel" name="reliabilityValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="reliabilityLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Reliability</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="reliabilityLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_reliable.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="midColFrame">
+       <layout class="QVBoxLayout" name="midColLayout" stretch="0,0,0,0">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="airTempCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="airTempGrid" columnstretch="1,5">
+           <item row="0" column="1">
+            <widget class="QLabel" name="airTempLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Air temperature</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="airTempValue">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="airTempLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_airTemp.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="windSpeedCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="windSpeedGrid" columnstretch="1,5">
+           <item row="0" column="1">
+            <widget class="QLabel" name="windSpeedLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Wind speed</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="windSpeedValue">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="widget" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_windSpeed.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="roadCondCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="roadCondGrid" columnstretch="1,5">
+           <item row="0" column="1">
+            <widget class="QLabel" name="roadCondLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Road condition</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="roadCondValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="roadCondLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_roadCond.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="symbolCard" native="true">
+          <property name="styleSheet">
+           <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+          </property>
+          <layout class="QGridLayout" name="symbolGrid" columnstretch="1,5">
+           <item row="0" column="1">
+            <widget class="QLabel" name="symbolLabel">
+             <property name="styleSheet">
+              <string notr="true">font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Weather symbol</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="symbolValue">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="2">
+            <widget class="QWidget" name="symbolLogo" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(://MaterialDesignIcons/forecast_symbol.svg);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="forecastReasonCard" native="true">
+       <property name="styleSheet">
+        <string notr="true">.QWidget {border: 1px solid black; border-radius: 15px} .QLabel {color: black;} .QFrame {border: none}</string>
+       </property>
+       <layout class="QGridLayout" name="forecastReasonLayout">
+        <item row="2" column="0">
+         <widget class="QFrame" name="reasonLogo">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(://MaterialDesignIcons/forecast_reason.svg);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QWidget" name="windWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="windReasonLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="windLabel">
+             <property name="text">
+              <string>Wind:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="windReasonValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="1" colspan="2">
+         <widget class="QLabel" name="reasonLabel">
+          <property name="styleSheet">
+           <string notr="true">font-weight: 600;</string>
+          </property>
+          <property name="text">
+           <string>Forecast condition reason</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="3">
+         <widget class="QWidget" name="freezeRainWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="freezeRainLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="freezeRainLabel">
+             <property name="text">
+              <string>Freeze rain:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="freezeRainValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="3">
+         <widget class="QWidget" name="frictionWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="frictionLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="frictionLabel">
+             <property name="text">
+              <string>Friction:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="frictionValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="3">
+         <widget class="QWidget" name="precipitationWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="precipitationLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="precipitationLabel">
+             <property name="text">
+              <string>Precipitation:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="precipitationValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="3">
+         <widget class="QWidget" name="roadWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="roadLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="roadLabel">
+             <property name="text">
+              <string>Road:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="roadValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="3">
+         <widget class="QWidget" name="visibilityWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="visibilityLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="visibilityLabel">
+             <property name="text">
+              <string>Visibility:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="visibilityValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="9" column="0" colspan="3">
+         <widget class="QWidget" name="slipperinessWidget" native="true">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <layout class="QHBoxLayout" name="slipperinessLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="slipperinessLabel">
+             <property name="text">
+              <string>Slipperiness:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="slipperinessValue">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow{
+background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralWidget{
+background-color: white;
+}
+
+.QLineEdit, .QDateTimeEdit, .QSpinBox {
+background-color: white;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_11">
+    <item row="0" column="1">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#stackedWidget{
+background-color: white;
+border-radius:20px;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="trafficPage">
+       <property name="minimumSize">
+        <size>
+         <width>644</width>
+         <height>539</height>
+        </size>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="opaqueResize">
+           <bool>true</bool>
+          </property>
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="styleSheet">
+            <string notr="true">color: black;</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="maintenanceTab">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <attribute name="title">
+             <string>Maintenance</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_24" stretch="0">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="MaintenanceView" name="maintenanceUI" native="true"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="forecastTab">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <attribute name="title">
+             <string>Road Forecast</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="ForecastView" name="forecastUI" native="true"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QTabWidget" name="weatherTab">
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: black;</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="messagesTab">
+            <attribute name="title">
+             <string>Messages</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="MessagesView" name="messageBoxPlaceholder" native="true"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_4">
+            <attribute name="title">
+             <string>Weather</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="CombinedView" name="combinedWeatherUI" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_8"/>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="weatherPage">
+       <layout class="QHBoxLayout" name="weatherPageHorizontalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="WeatherView" name="weatherFormWidget" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="combinedPage">
+       <layout class="QHBoxLayout" name="combinedPageHorizontalLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="CombinedView" name="combinedWidgetForm" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="settingsPage">
+       <property name="minimumSize">
+        <size>
+         <width>644</width>
+         <height>539</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="sidebarWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>112</width>
+        <height>615</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#sidebarWidget{
+background-color: #0094FF; 
+border-radius: 20px; 
+background-repeat: none;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="trafficButtonlLayout" stretch="0">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QWidget" name="tafficButtonWidget" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>119</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#tafficButtonWidget{
+background-color: #0094FF; 
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="1,2">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="trafficButton">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>51</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>52</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#trafficButton{
+border-image: url(://MaterialDesignIcons/traffic-lightwhite.svg);
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="trafficLabel">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>52</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>52</width>
+                <height>43</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Droid Sans Fallback</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#trafficLabel {
+background-color: #0094FF; 
+color: white;
+}</string>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="text">
+               <string> &lt;font size=&quot;+0.5&quot;&gt;Traffic&lt;br&gt;&lt;/font&gt; &lt;font size=&quot;+0.5&quot;&gt; Data&lt;/font </string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::RichText</enum>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignHCenter|Qt::AlignTop</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="indent">
+               <number>-1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="WeatherButtonvVerticalLayout">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QWidget" name="weatherButtonWidget" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>82</width>
+             <height>119</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#weatherButtonWidget{
+background-color: #0094FF; 
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,2">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="weatherButton">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>61</width>
+                <height>59</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>64</width>
+                <height>59</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#weatherButton{
+background-color: #0094FF; 
+border-image: url(://MaterialDesignIcons/weather_black.svg);
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="weatherLabel">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>64</width>
+                <height>36</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>64</width>
+                <height>39</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Droid Sans Fallback</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#weatherLabel {
+background-color: #0094FF; 
+color: black;
+}</string>
+              </property>
+              <property name="text">
+               <string> &lt;font size=&quot;+0.5&quot;&gt;Weather&lt;br&gt;&lt;/font&gt; &lt;font size=&quot;+0.5&quot;&gt; Data&lt;/font </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSave_inputs">
+    <property name="title">
+     <string>Save</string>
+    </property>
+    <addaction name="actionMaintenance_inputs"/>
+    <addaction name="separator"/>
+    <addaction name="actionMessages_inputs"/>
+    <addaction name="actionForecast_inputs"/>
+    <addaction name="actionWeather_inputs"/>
+   </widget>
+   <widget class="QMenu" name="menuRestore_inputs">
+    <property name="title">
+     <string>Restore</string>
+    </property>
+    <addaction name="actionMaintenance_inputs_2"/>
+    <addaction name="actionMessages_inputs_2"/>
+    <addaction name="actionForecast_inputs_2"/>
+    <addaction name="actionWeather_inputs_2"/>
+   </widget>
+   <widget class="QMenu" name="menuLocation">
+    <property name="title">
+     <string>Locations</string>
+    </property>
+    <addaction name="actionAdd_new_predefined_location"/>
+   </widget>
+   <addaction name="menuSave_inputs"/>
+   <addaction name="menuRestore_inputs"/>
+   <addaction name="menuLocation"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave_inputs">
+   <property name="text">
+    <string>Save inputs</string>
+   </property>
+  </action>
+  <action name="actionRestore_inputs">
+   <property name="text">
+    <string>Restore inputs</string>
+   </property>
+  </action>
+  <action name="actionAdd_new_location">
+   <property name="text">
+    <string>Add new location</string>
+   </property>
+  </action>
+  <action name="actionMaintenance_inputs">
+   <property name="text">
+    <string>Maintenance inputs</string>
+   </property>
+  </action>
+  <action name="actionMessages_inputs">
+   <property name="text">
+    <string>Messages inputs</string>
+   </property>
+  </action>
+  <action name="actionForecast_inputs">
+   <property name="text">
+    <string>Forecast inputs</string>
+   </property>
+  </action>
+  <action name="actionWeather_inputs">
+   <property name="text">
+    <string>Weather inputs</string>
+   </property>
+  </action>
+  <action name="actionAdd_new_predefined_location">
+   <property name="text">
+    <string>Add new predefined location</string>
+   </property>
+  </action>
+  <action name="actionMaintenance_inputs_2">
+   <property name="text">
+    <string>Maintenance inputs</string>
+   </property>
+  </action>
+  <action name="actionMessages_inputs_2">
+   <property name="text">
+    <string>Messages inputs</string>
+   </property>
+  </action>
+  <action name="actionForecast_inputs_2">
+   <property name="text">
+    <string>Forecast inputs</string>
+   </property>
+  </action>
+  <action name="actionWeather_inputs_2">
+   <property name="text">
+    <string>Weather inputs</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WeatherView</class>
+   <extends>QWidget</extends>
+   <header location="global">Weather/UI/weatherview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MaintenanceView</class>
+   <extends>QWidget</extends>
+   <header>Maintenance/UI/maintenanceview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ForecastView</class>
+   <extends>QWidget</extends>
+   <header>Forecast/UI/forecastview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MessagesView</class>
+   <extends>QWidget</extends>
+   <header location="global">Messages/UI/messagesview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CombinedView</class>
+   <extends>QWidget</extends>
+   <header>Combined/UI/combinedview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>trafficButton</tabstop>
+  <tabstop>weatherButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
